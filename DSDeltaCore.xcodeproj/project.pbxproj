@@ -18,6 +18,9 @@
 		BF275FF922F8C5E5005D98FE /* wifi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE2A22F4CAF500F21EC9 /* wifi.cpp */; };
 		BF275FFB22F8C660005D98FE /* features_cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = BF275FFA22F8C660005D98FE /* features_cpu.c */; };
 		BF275FFD22F8C673005D98FE /* encoding_utf.c in Sources */ = {isa = PBXBuildFile; fileRef = BF275FFC22F8C672005D98FE /* encoding_utf.c */; };
+		BF27600722F8C9B2005D98FE /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27600422F8C9B1005D98FE /* DS.swift */; };
+		BF27600822F8C9B2005D98FE /* DSEmulatorBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = BF27600522F8C9B1005D98FE /* DSEmulatorBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF27600922F8C9B2005D98FE /* DSEmulatorBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF27600622F8C9B2005D98FE /* DSEmulatorBridge.mm */; };
 		BFAEFD2A22F4C40300F21EC9 /* DSDeltaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BFAEFD2822F4C40300F21EC9 /* DSDeltaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFAEFD5622F4C8A600F21EC9 /* slot1comp_protocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFD4022F4C8A500F21EC9 /* slot1comp_protocol.cpp */; };
 		BFAEFD5722F4C8A600F21EC9 /* slot2_expMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFD4122F4C8A500F21EC9 /* slot2_expMemory.cpp */; };
@@ -161,6 +164,9 @@
 		BF275FFA22F8C660005D98FE /* features_cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = features_cpu.c; path = "desmume/desmume/src/libretro-common/features/features_cpu.c"; sourceTree = SOURCE_ROOT; };
 		BF275FFC22F8C672005D98FE /* encoding_utf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = encoding_utf.c; path = "desmume/desmume/src/libretro-common/encodings/encoding_utf.c"; sourceTree = SOURCE_ROOT; };
 		BF27600222F8C963005D98FE /* pcap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pcap.h; sourceTree = "<group>"; };
+		BF27600422F8C9B1005D98FE /* DS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
+		BF27600522F8C9B1005D98FE /* DSEmulatorBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmulatorBridge.h; sourceTree = "<group>"; };
+		BF27600622F8C9B2005D98FE /* DSEmulatorBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DSEmulatorBridge.mm; sourceTree = "<group>"; };
 		BFAEFD2522F4C40300F21EC9 /* DSDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAEFD2822F4C40300F21EC9 /* DSDeltaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDeltaCore.h; sourceTree = "<group>"; };
 		BFAEFD2922F4C40300F21EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -435,6 +441,15 @@
 			name = libretro;
 			sourceTree = "<group>";
 		};
+		BF27600A22F8C9B9005D98FE /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				BF27600522F8C9B1005D98FE /* DSEmulatorBridge.h */,
+				BF27600622F8C9B2005D98FE /* DSEmulatorBridge.mm */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
 		BFAEFD1B22F4C40300F21EC9 = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +473,8 @@
 			isa = PBXGroup;
 			children = (
 				BFAEFD2822F4C40300F21EC9 /* DSDeltaCore.h */,
+				BF27600422F8C9B1005D98FE /* DS.swift */,
+				BF27600A22F8C9B9005D98FE /* Bridge */,
 				BFAEFD2922F4C40300F21EC9 /* Info.plist */,
 			);
 			path = DSDeltaCore;
@@ -782,6 +799,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAEFD2A22F4C40300F21EC9 /* DSDeltaCore.h in Headers */,
+				BF27600822F8C9B2005D98FE /* DSEmulatorBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,6 +915,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF27600922F8C9B2005D98FE /* DSEmulatorBridge.mm in Sources */,
+				BF27600722F8C9B2005D98FE /* DS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
