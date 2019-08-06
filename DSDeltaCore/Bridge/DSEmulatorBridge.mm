@@ -158,9 +158,8 @@ SoundInterface_struct *SNDCoreList[] = {
         _isPrepared = true;
     }
     
-    // Set to /dev/null so we have full control over when and where we write save files to disk.
-    NSURL *temporaryDirectory = [NSURL fileURLWithPath:@"/dev/null" isDirectory:YES];
-    path.setpath(PathInfo::BATTERY, temporaryDirectory.fileSystemRepresentation);
+    NSURL *gameDirectory = [gameURL URLByDeletingLastPathComponent];
+    path.setpath(PathInfo::BATTERY, gameDirectory.fileSystemRepresentation);
     
     if (!NDS_LoadROM(gameURL.relativePath.UTF8String))
     {
@@ -214,20 +213,24 @@ SoundInterface_struct *SNDCoreList[] = {
 
 - (void)saveGameSaveToURL:(NSURL *)URL
 {
+    //TODO: Copy automatically-saved game save to URL.
 }
 
 - (void)loadGameSaveFromURL:(NSURL *)URL
 {
+    //TODO: Load the game save at URL (and not just the automatically loaded game save).
 }
 
 #pragma mark - Save States -
 
 - (void)saveSaveStateToURL:(NSURL *)URL
 {
+    savestate_save(URL.fileSystemRepresentation);
 }
 
 - (void)loadSaveStateFromURL:(NSURL *)URL
 {
+    savestate_load(URL.fileSystemRepresentation);
 }
 
 #pragma mark - Cheats -
