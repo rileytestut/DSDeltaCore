@@ -66,6 +66,9 @@ SoundInterface_struct *SNDCoreList[] = {
 
 @property (nonatomic, copy, nullable, readwrite) NSURL *gameURL;
 
+@property (nonatomic) uint32_t activatedInputs;
+@property (nonatomic) CGPoint touchScreenPoint;
+
 @end
 
 @implementation DSEmulatorBridge
@@ -184,6 +187,31 @@ SoundInterface_struct *SNDCoreList[] = {
 
 - (void)runFrameAndProcessVideo:(BOOL)processVideo
 {
+    // Inputs
+    NDS_setPad(self.activatedInputs & DSGameInputRight,
+               self.activatedInputs & DSGameInputLeft,
+               self.activatedInputs & DSGameInputDown,
+               self.activatedInputs & DSGameInputUp,
+               self.activatedInputs & DSGameInputSelect,
+               self.activatedInputs & DSGameInputStart,
+               self.activatedInputs & DSGameInputB,
+               self.activatedInputs & DSGameInputA,
+               self.activatedInputs & DSGameInputY,
+               self.activatedInputs & DSGameInputX,
+               self.activatedInputs & DSGameInputL,
+               self.activatedInputs & DSGameInputR,
+               false,
+               false);
+    
+    if (self.activatedInputs & DSGameInputTouchScreenX || self.activatedInputs & DSGameInputTouchScreenY)
+    {
+        NDS_setTouchPos(self.touchScreenPoint.x, self.touchScreenPoint.y);
+    }
+    else
+    {
+        NDS_releaseTouch();
+    }
+    
     NDS_beginProcessingInput();
     NDS_endProcessingInput();
     
@@ -207,14 +235,52 @@ SoundInterface_struct *SNDCoreList[] = {
 
 - (void)activateInput:(NSInteger)input value:(double)value
 {
+    self.activatedInputs |= (uint32_t)input;
+    
+    CGPoint touchPoint = self.touchScreenPoint;
+    
+    switch ((DSGameInput)input)
+    {
+    case DSGameInputTouchScreenX:
+        touchPoint.x = value * 256;
+        break;
+        
+    case DSGameInputTouchScreenY:
+        touchPoint.y = value * 192;
+        break;
+            
+    default: break;
+    }
+
+    self.touchScreenPoint = touchPoint;
 }
 
 - (void)deactivateInput:(NSInteger)input
-{
+{    
+    self.activatedInputs &= ~((uint32_t)input);
+    
+    CGPoint touchPoint = self.touchScreenPoint;
+    
+    switch ((DSGameInput)input)
+    {
+        case DSGameInputTouchScreenX:
+            touchPoint.x = 0;
+            break;
+            
+        case DSGameInputTouchScreenY:
+            touchPoint.y = 0;
+            break;
+            
+        default: break;
+    }
+    
+    self.touchScreenPoint = touchPoint;
 }
 
 - (void)resetInputs
 {
+    self.activatedInputs = 0;
+    self.touchScreenPoint = CGPointZero;
 }
 
 #pragma mark - Game Saves -

@@ -21,6 +21,8 @@
 		BF27600722F8C9B2005D98FE /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27600422F8C9B1005D98FE /* DS.swift */; };
 		BF27600822F8C9B2005D98FE /* DSEmulatorBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = BF27600522F8C9B1005D98FE /* DSEmulatorBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF27600922F8C9B2005D98FE /* DSEmulatorBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF27600622F8C9B2005D98FE /* DSEmulatorBridge.mm */; };
+		BF27601422F8D55E005D98FE /* Standard.deltamapping in Resources */ = {isa = PBXBuildFile; fileRef = BF27601322F8D55E005D98FE /* Standard.deltamapping */; };
+		BF27601622F8D566005D98FE /* Standard.deltaskin in Resources */ = {isa = PBXBuildFile; fileRef = BF27601522F8D566005D98FE /* Standard.deltaskin */; };
 		BFAEFD2A22F4C40300F21EC9 /* DSDeltaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BFAEFD2822F4C40300F21EC9 /* DSDeltaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFAEFD5622F4C8A600F21EC9 /* slot1comp_protocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFD4022F4C8A500F21EC9 /* slot1comp_protocol.cpp */; };
 		BFAEFD5722F4C8A600F21EC9 /* slot2_expMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFD4122F4C8A500F21EC9 /* slot2_expMemory.cpp */; };
@@ -167,6 +169,8 @@
 		BF27600422F8C9B1005D98FE /* DS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
 		BF27600522F8C9B1005D98FE /* DSEmulatorBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmulatorBridge.h; sourceTree = "<group>"; };
 		BF27600622F8C9B2005D98FE /* DSEmulatorBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DSEmulatorBridge.mm; sourceTree = "<group>"; };
+		BF27601322F8D55E005D98FE /* Standard.deltamapping */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Standard.deltamapping; sourceTree = "<group>"; };
+		BF27601522F8D566005D98FE /* Standard.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard.deltaskin; path = "Controller Skin/Standard.deltaskin"; sourceTree = "<group>"; };
 		BFAEFD2522F4C40300F21EC9 /* DSDeltaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSDeltaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAEFD2822F4C40300F21EC9 /* DSDeltaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDeltaCore.h; sourceTree = "<group>"; };
 		BFAEFD2922F4C40300F21EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -450,6 +454,16 @@
 			path = Bridge;
 			sourceTree = "<group>";
 		};
+		BF27601222F8D550005D98FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFAEFD2922F4C40300F21EC9 /* Info.plist */,
+				BF27601522F8D566005D98FE /* Standard.deltaskin */,
+				BF27601322F8D55E005D98FE /* Standard.deltamapping */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BFAEFD1B22F4C40300F21EC9 = {
 			isa = PBXGroup;
 			children = (
@@ -475,7 +489,7 @@
 				BFAEFD2822F4C40300F21EC9 /* DSDeltaCore.h */,
 				BF27600422F8C9B1005D98FE /* DS.swift */,
 				BF27600A22F8C9B9005D98FE /* Bridge */,
-				BFAEFD2922F4C40300F21EC9 /* Info.plist */,
+				BF27601222F8D550005D98FE /* Supporting Files */,
 			);
 			path = DSDeltaCore;
 			sourceTree = "<group>";
@@ -885,6 +899,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF27601622F8D566005D98FE /* Standard.deltaskin in Resources */,
+				BF27601422F8D55E005D98FE /* Standard.deltamapping in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
