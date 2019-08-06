@@ -182,15 +182,23 @@ SoundInterface_struct *SNDCoreList[] = {
 
 #pragma mark - Game Loop -
 
-- (void)runFrame
+- (void)runFrameAndProcessVideo:(BOOL)processVideo
 {
     NDS_beginProcessingInput();
     NDS_endProcessingInput();
     
+    if (!processVideo)
+    {
+        NDS_SkipNextFrame();
+    }
+    
     NDS_exec<false>();
     
-    memcpy(self.videoRenderer.videoBuffer, GPU->GetDisplayInfo().masterNativeBuffer, 256 * 384 * 4);
-    [self.videoRenderer processFrame];
+    if (processVideo)
+    {
+        memcpy(self.videoRenderer.videoBuffer, GPU->GetDisplayInfo().masterNativeBuffer, 256 * 384 * 4);
+        [self.videoRenderer processFrame];
+    }
     
     SPU_Emulate_user();
 }
