@@ -99,7 +99,7 @@ SoundInterface_struct *SNDCoreList[] = {
     CommonSettings.num_cores = (int)sysconf( _SC_NPROCESSORS_ONLN );
     CommonSettings.advanced_timing = false;
     CommonSettings.cheatsDisable = true;
-    CommonSettings.autodetectBackupMethod = 0;
+    CommonSettings.autodetectBackupMethod = 1;
     CommonSettings.use_jit = false;
     CommonSettings.micMode = TCommonSettings::Physical;
     CommonSettings.showGpu.main = 1;
@@ -161,7 +161,7 @@ SoundInterface_struct *SNDCoreList[] = {
         _isPrepared = true;
     }
     
-    NSURL *gameDirectory = [gameURL URLByDeletingLastPathComponent];
+    NSURL *gameDirectory = [NSURL URLWithString:@"/dev/null"];
     path.setpath(PathInfo::BATTERY, gameDirectory.fileSystemRepresentation);
     
     if (!NDS_LoadROM(gameURL.relativePath.UTF8String))
@@ -287,12 +287,15 @@ SoundInterface_struct *SNDCoreList[] = {
 
 - (void)saveGameSaveToURL:(NSURL *)URL
 {
-    //TODO: Copy automatically-saved game save to URL.
+    MMU_new.backupDevice.export_raw(URL.fileSystemRepresentation);
 }
 
 - (void)loadGameSaveFromURL:(NSURL *)URL
 {
-    //TODO: Load the game save at URL (and not just the automatically loaded game save).
+    if ([[NSFileManager defaultManager] fileExistsAtPath:URL.path])
+    {
+        MMU_new.backupDevice.import_raw(URL.fileSystemRepresentation);
+    }
 }
 
 #pragma mark - Save States -
