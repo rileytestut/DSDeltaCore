@@ -11,11 +11,6 @@ import AVFoundation
 
 import DeltaCore
 
-public extension GameType
-{
-    static let ds = GameType("com.rileytestut.delta.game.ds")
-}
-
 @objc public enum DSGameInput: Int, Input
 {
     case up = 1
@@ -51,25 +46,21 @@ public struct DS: DeltaCoreProtocol
 {
     public static let core = DS()
     
-    public let gameType = GameType.ds
+    public var name: String { "DSDeltaCore" }
+    public var identifier: String { "com.rileytestut.DSDeltaCore" }
     
-    public let gameInputType: Input.Type = DSGameInput.self
+    public var gameType: GameType { GameType.ds }
+    public var gameInputType: Input.Type { DSGameInput.self }
+    public var gameSaveFileExtension: String { "dsv" }
     
-    public let gameSaveFileExtension = "dsv"
-    
-    public var audioFormat: AVAudioFormat {
-        return AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 44100, channels: 2, interleaved: true)!
-    }
-    
-    public var videoFormat: VideoFormat {
-        return VideoFormat(format: .bitmap(.rgba8), dimensions: CGSize(width: 256, height: 384))
-    }
+    public let audioFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 44100, channels: 2, interleaved: true)!
+    public let videoFormat = VideoFormat(format: .bitmap(.rgba8), dimensions: CGSize(width: 256, height: 384))
     
     public var supportedCheatFormats: Set<CheatFormat> {
         return []
     }
     
-    public let emulatorBridge: EmulatorBridging = DSEmulatorBridge.shared
+    public var emulatorBridge: EmulatorBridging { DSEmulatorBridge.shared }
     
     private init()
     {

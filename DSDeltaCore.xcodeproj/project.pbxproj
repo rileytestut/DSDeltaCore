@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0B260923E90F4A007BE38B /* texcache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF0B260523E90DCD007BE38B /* texcache.cpp */; };
+		BF0F903623E63BEC0094BF82 /* DSTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = BF0F903423E63BEC0094BF82 /* DSTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF0F903723E63BEC0094BF82 /* DSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0F903523E63BEC0094BF82 /* DSTypes.m */; };
 		BF275FE422F8C21A005D98FE /* slot1_retail_mcrom_debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFD3F22F4C8A500F21EC9 /* slot1_retail_mcrom_debug.cpp */; };
 		BF275FEA22F8C41D005D98FE /* liblibDeSmuME.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAEFD3422F4C82800F21EC9 /* liblibDeSmuME.a */; };
 		BF275FED22F8C52F005D98FE /* file_path.c in Sources */ = {isa = PBXBuildFile; fileRef = BF275FEC22F8C52F005D98FE /* file_path.c */; };
@@ -96,7 +99,6 @@
 		BFAEFE7322F4CAF900F21EC9 /* thumb_instructions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE1B22F4CAF400F21EC9 /* thumb_instructions.cpp */; };
 		BFAEFE7422F4CAF900F21EC9 /* cp15.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE1E22F4CAF400F21EC9 /* cp15.cpp */; };
 		BFAEFE7522F4CAF900F21EC9 /* commandline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE1F22F4CAF400F21EC9 /* commandline.cpp */; };
-		BFAEFE7622F4CAF900F21EC9 /* rasterize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE2022F4CAF400F21EC9 /* rasterize.cpp */; };
 		BFAEFE7722F4CAF900F21EC9 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE2122F4CAF400F21EC9 /* matrix.cpp */; };
 		BFAEFE7822F4CAF900F21EC9 /* MMU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE2322F4CAF400F21EC9 /* MMU.cpp */; };
 		BFAEFE7922F4CAF900F21EC9 /* slot1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE2422F4CAF400F21EC9 /* slot1.cpp */; };
@@ -114,20 +116,17 @@
 		BFAEFE8922F4CAF900F21EC9 /* gfx3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE4922F4CAF600F21EC9 /* gfx3d.cpp */; };
 		BFAEFE8A22F4CAF900F21EC9 /* NDSSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE4A22F4CAF600F21EC9 /* NDSSystem.cpp */; };
 		BFAEFE8C22F4CAF900F21EC9 /* version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE4E22F4CAF600F21EC9 /* version.cpp */; };
-		BFAEFE8D22F4CAF900F21EC9 /* driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE5022F4CAF600F21EC9 /* driver.cpp */; };
 		BFAEFE8E22F4CAF900F21EC9 /* mic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE5122F4CAF600F21EC9 /* mic.cpp */; };
 		BFAEFE8F22F4CAF900F21EC9 /* GPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE5322F4CAF600F21EC9 /* GPU.cpp */; };
 		BFAEFE9022F4CAF900F21EC9 /* firmware.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE5422F4CAF600F21EC9 /* firmware.cpp */; };
 		BFAEFE9122F4CAF900F21EC9 /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE5822F4CAF700F21EC9 /* debug.cpp */; };
 		BFAEFE9222F4CAF900F21EC9 /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE5E22F4CAF700F21EC9 /* path.cpp */; };
 		BFAEFE9322F4CAF900F21EC9 /* rtc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6222F4CAF800F21EC9 /* rtc.cpp */; };
-		BFAEFE9422F4CAF900F21EC9 /* render3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6522F4CAF800F21EC9 /* render3D.cpp */; };
 		BFAEFE9522F4CAF900F21EC9 /* mc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6622F4CAF800F21EC9 /* mc.cpp */; };
 		BFAEFE9622F4CAF900F21EC9 /* SPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6822F4CAF800F21EC9 /* SPU.cpp */; };
 		BFAEFE9722F4CAF900F21EC9 /* bios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6922F4CAF800F21EC9 /* bios.cpp */; };
 		BFAEFE9822F4CAF900F21EC9 /* armcpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6A22F4CAF800F21EC9 /* armcpu.cpp */; };
 		BFAEFE9922F4CAF900F21EC9 /* movie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6C22F4CAF800F21EC9 /* movie.cpp */; };
-		BFAEFE9A22F4CAF900F21EC9 /* texcache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE6E22F4CAF900F21EC9 /* texcache.cpp */; };
 		BFAEFE9C22F4CAF900F21EC9 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFE7222F4CAF900F21EC9 /* common.cpp */; };
 		BFAEFE9D22F4CC0300F21EC9 /* deposterize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFAEFD6D22F4C8E000F21EC9 /* deposterize.cpp */; };
 /* End PBXBuildFile section */
@@ -155,6 +154,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF0B260523E90DCD007BE38B /* texcache.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = texcache.cpp; sourceTree = "<group>"; };
+		BF0F903423E63BEC0094BF82 /* DSTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSTypes.h; sourceTree = "<group>"; };
+		BF0F903523E63BEC0094BF82 /* DSTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSTypes.m; sourceTree = "<group>"; };
 		BF275FE622F8C29D005D98FE /* git-scmrev.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "git-scmrev.sh"; path = "desmume/desmume/src/frontend/cocoa/git-scmrev.sh"; sourceTree = SOURCE_ROOT; };
 		BF275FEC22F8C52F005D98FE /* file_path.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = file_path.c; path = "desmume/desmume/src/libretro-common/file/file_path.c"; sourceTree = SOURCE_ROOT; };
 		BF275FEE22F8C542005D98FE /* retro_dirent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = retro_dirent.c; path = "desmume/desmume/src/libretro-common/file/retro_dirent.c"; sourceTree = SOURCE_ROOT; };
@@ -424,6 +426,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0F903823E63C210094BF82 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				BF0F903423E63BEC0094BF82 /* DSTypes.h */,
+				BF0F903523E63BEC0094BF82 /* DSTypes.m */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		BF275FE922F8C41D005D98FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +461,7 @@
 			children = (
 				BF27600522F8C9B1005D98FE /* DSEmulatorBridge.h */,
 				BF27600622F8C9B2005D98FE /* DSEmulatorBridge.mm */,
+				BF0B260523E90DCD007BE38B /* texcache.cpp */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -489,6 +501,7 @@
 				BFAEFD2822F4C40300F21EC9 /* DSDeltaCore.h */,
 				BF27600422F8C9B1005D98FE /* DS.swift */,
 				BF27600A22F8C9B9005D98FE /* Bridge */,
+				BF0F903823E63C210094BF82 /* Types */,
 				BF27601222F8D550005D98FE /* Supporting Files */,
 			);
 			path = DSDeltaCore;
@@ -812,6 +825,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0F903623E63BEC0094BF82 /* DSTypes.h in Headers */,
 				BFAEFD2A22F4C40300F21EC9 /* DSDeltaCore.h in Headers */,
 				BF27600822F8C9B2005D98FE /* DSEmulatorBridge.h in Headers */,
 			);
@@ -931,6 +945,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0F903723E63BEC0094BF82 /* DSTypes.m in Sources */,
 				BF27600922F8C9B2005D98FE /* DSEmulatorBridge.mm in Sources */,
 				BF27600722F8C9B2005D98FE /* DS.swift in Sources */,
 			);
@@ -942,7 +957,6 @@
 			files = (
 				BFAEFE0522F4CA2D00F21EC9 /* lock.cpp in Sources */,
 				BFAEFE9822F4CAF900F21EC9 /* armcpu.cpp in Sources */,
-				BFAEFE9A22F4CAF900F21EC9 /* texcache.cpp in Sources */,
 				BFAEFE1922F4CA5F00F21EC9 /* tinystr.cpp in Sources */,
 				BFAEFD5622F4C8A600F21EC9 /* slot1comp_protocol.cpp in Sources */,
 				BFAEFD8422F4C8E000F21EC9 /* 2xsai.cpp in Sources */,
@@ -967,12 +981,10 @@
 				BF275FFD22F8C673005D98FE /* encoding_utf.c in Sources */,
 				BFAEFD7F22F4C8E000F21EC9 /* hq2x.cpp in Sources */,
 				BFAEFE9D22F4CC0300F21EC9 /* deposterize.cpp in Sources */,
-				BFAEFE9422F4CAF900F21EC9 /* render3D.cpp in Sources */,
 				BFAEFD6522F4C8A600F21EC9 /* slot2_passme.cpp in Sources */,
 				BFAEFD5922F4C8A600F21EC9 /* slot2_guitarGrip.cpp in Sources */,
 				BFAEFDD622F4C9E800F21EC9 /* vfat.cpp in Sources */,
 				BFAEFE0722F4CA2D00F21EC9 /* disc.cpp in Sources */,
-				BFAEFE8D22F4CAF900F21EC9 /* driver.cpp in Sources */,
 				BFAEFDB622F4C99500F21EC9 /* cpu_detect_x86_gcc.cpp in Sources */,
 				BFAEFE8C22F4CAF900F21EC9 /* version.cpp in Sources */,
 				BFAEFE0622F4CA2D00F21EC9 /* libfat.cpp in Sources */,
@@ -1009,7 +1021,6 @@
 				BFAEFE8322F4CAF900F21EC9 /* arm_jit.cpp in Sources */,
 				BFAEFD5A22F4C8A600F21EC9 /* slot1_retail_auto.cpp in Sources */,
 				BFAEFD5B22F4C8A600F21EC9 /* slot2_none.cpp in Sources */,
-				BFAEFE7622F4CAF900F21EC9 /* rasterize.cpp in Sources */,
 				BFAEFE7A22F4CAF900F21EC9 /* encrypt.cpp in Sources */,
 				BFAEFDB522F4C99500F21EC9 /* WavFile.cpp in Sources */,
 				BFAEFDD922F4C9E800F21EC9 /* xstring.cpp in Sources */,
@@ -1017,6 +1028,7 @@
 				BFAEFE0E22F4CA2D00F21EC9 /* fatdir.cpp in Sources */,
 				BFAEFDE722F4CA0900F21EC9 /* decrypt.cpp in Sources */,
 				BFAEFE9122F4CAF900F21EC9 /* debug.cpp in Sources */,
+				BF0B260923E90F4A007BE38B /* texcache.cpp in Sources */,
 				BFAEFE8022F4CAF900F21EC9 /* readwrite.cpp in Sources */,
 				BFAEFE0C22F4CA2D00F21EC9 /* file_allocation_table.cpp in Sources */,
 				BFAEFD9222F4C97C00F21EC9 /* SndOut.cpp in Sources */,
@@ -1127,7 +1139,7 @@
 					"\"$(SRCROOT)/desmume/desmume/src/metaspu/SoundTouch\"",
 					"\"$(SRCROOT)/libDeSmuME\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1204,7 +1216,7 @@
 					"\"$(SRCROOT)/desmume/desmume/src/metaspu/SoundTouch\"",
 					"\"$(SRCROOT)/libDeSmuME\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = (
@@ -1291,7 +1303,8 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XVY5G3U44;
-				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1307,6 +1320,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6XVY5G3U44;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

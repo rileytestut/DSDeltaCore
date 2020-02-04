@@ -8,7 +8,8 @@
 
 #import "DSEmulatorBridge.h"
 
-#import <DSDeltaCore/DSDeltaCore-Swift.h>
+#import <DeltaCore/DeltaCore-Swift.h>
+#import "DSDeltaCore-Swift.h"
 
 // DeSmuME
 #include "types.h"
@@ -59,7 +60,7 @@ SoundInterface_struct *SNDCoreList[] = {
     NULL
 };
 
-@interface DSEmulatorBridge ()
+@interface DSEmulatorBridge () <DLTAEmulatorBridging>
 {
     BOOL _isPrepared;
 }
