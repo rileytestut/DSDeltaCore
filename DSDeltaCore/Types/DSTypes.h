@@ -9,4 +9,4 @@
 #import <DeltaCore/DeltaTypes.h>
 
 // Extensible Enums
-FOUNDATION_EXPORT GameType const GameTypeDS NS_SWIFT_NAME(GameType.ds);
+FOUNDATION_EXPORT GameType const GameTypeDS NS_SWIFT_NAME(ds);
