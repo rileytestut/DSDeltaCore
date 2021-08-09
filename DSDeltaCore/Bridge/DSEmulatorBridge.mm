@@ -10,6 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import <DeltaCore/DeltaCore.h>
 #import <DeltaCore/DeltaCore-Swift.h>
 
 #if STATIC_LIBRARY
