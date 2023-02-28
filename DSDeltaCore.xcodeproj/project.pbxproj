@@ -1139,7 +1139,7 @@
 					"\"$(SRCROOT)/desmume/desmume/src/metaspu/SoundTouch\"",
 					"\"$(SRCROOT)/libDeSmuME\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1216,7 +1216,7 @@
 					"\"$(SRCROOT)/desmume/desmume/src/metaspu/SoundTouch\"",
 					"\"$(SRCROOT)/libDeSmuME\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = (
