@@ -242,7 +242,7 @@ SoundInterface_struct *SNDCoreList[] = {
 
 #pragma mark - Inputs -
 
-- (void)activateInput:(NSInteger)input value:(double)value
+- (void)activateInput:(NSInteger)input value:(double)value playerIndex:(NSInteger)playerIndex
 {
     self.activatedInputs |= (uint32_t)input;
     
@@ -264,7 +264,7 @@ SoundInterface_struct *SNDCoreList[] = {
     self.touchScreenPoint = touchPoint;
 }
 
-- (void)deactivateInput:(NSInteger)input
+- (void)deactivateInput:(NSInteger)input playerIndex:(NSInteger)playerIndex
 {    
     self.activatedInputs &= ~((uint32_t)input);
     
